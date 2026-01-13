@@ -2,7 +2,7 @@
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git pull origin main --rebase  # Добавляем эту строку, чтобы избежать конфликтов
+          git pull --rebase origin main
           git add epg.xml
           git commit -m "Update EPG" || exit 0
-          git push
+          git push origin main
